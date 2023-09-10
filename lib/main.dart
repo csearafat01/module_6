@@ -76,7 +76,7 @@ class HomeScreen extends StatelessWidget {
             ),
             TextButton(
               style: TextButton.styleFrom(
-                  foregroundColor: Colors.purple,
+                  foregroundColor: Colors.pinkAccent,
                   textStyle: TextStyle(
                       fontSize: 24
                   )
@@ -106,13 +106,13 @@ class HomeScreen extends StatelessWidget {
                     color: Colors.white
                 ),
                 decoration: InputDecoration(
-                    fillColor: Colors.purple,
+                    fillColor: Colors.pinkAccent,
                     filled: true,
                     hintText: 'Enter your email address',
                     hintStyle: TextStyle(
                         color: Colors.white70
                     ),
-                    suffixIcon: Icon(Icons.email_outlined, color: Colors.white70,),
+                    //suffixIcon: Icon(Icons.email_outlined, color: Colors.white70,),
                     prefixIcon: Icon(Icons.email_outlined, color: Colors.white70,),
                     label: Text('Email address'),
                     labelStyle: TextStyle(
@@ -130,13 +130,14 @@ class HomeScreen extends StatelessWidget {
                     color: Colors.white
                 ),
                 decoration: InputDecoration(
-                  fillColor: Colors.purple,
+                  fillColor: Colors.pinkAccent,
                   filled: true,
                   hintText: 'Enter your password',
                   hintStyle: TextStyle(
                       color: Colors.white70
                   ),
-                  suffixIcon: Icon(Icons.password, color: Colors.white70,),
+                  prefixIcon: Icon(Icons.password, color: Colors.white70,),
+                  //suffixIcon: Icon(Icons.password, color: Colors.white70,),
                   label: Text('Password'),
                   labelStyle: TextStyle(
                       color: Colors.white

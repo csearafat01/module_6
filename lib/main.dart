@@ -28,135 +28,34 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('Home'),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
-              width: 200,
-              height: 100,
-              margin: EdgeInsets.all(16),
-              // padding: EdgeInsets.only(top: 10, bottom: 10, left: 4),
-              padding: EdgeInsets.symmetric(vertical: 10, horizontal: 30),
-              decoration: BoxDecoration(
-                color: Colors.amber,
-                border: Border.all(color: Colors.black, width: 2),
-                // // borderRadius: BorderRadius.circular(10)
-                borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(16),
-                  bottomLeft: Radius.circular(16),
-                ),
-                // shape: BoxShape.circle
-              ),
-              child: Text('Hello'),
-              alignment: Alignment.center,
+      body: Scrollbar(
+          thickness: 20,
+          radius: Radius.circular(10),
+          child: GridView(
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
             ),
-            Container(
-              margin: EdgeInsets.all(16),
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.pink,
-                  textStyle: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.w500
-                  ),
-                  padding: EdgeInsets.all(16),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(50)
-                  ),
-                ),
-                onLongPress: () {
-                  print('Email deleted!');
-                },
-                onPressed: () {
-                  print('Email has been sent');
-                },
-                child: Text('Send Email'),
-              ),
-            ),
-            TextButton(
-              style: TextButton.styleFrom(
-                  foregroundColor: Colors.pinkAccent,
-                  textStyle: TextStyle(
-                      fontSize: 24
-                  )
-              ),
-              onLongPress: () {
-                print('Long press');
-              },
-              onPressed: () {
-                print('Resend email');
-              },
-              child: Text('Resend'),
-            ),
-            IconButton(onPressed: () {}, icon: Icon(Icons.add)),
-            OutlinedButton(
-              onLongPress: () {
-                print('Long press on outlined button');
-              },
-              onPressed: () {},
-              child: Text('Outlined button'),
-            ),
-            // input
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: TextField(
-                // maxLines: 5,
-                style: TextStyle(
-                    color: Colors.white
-                ),
-                decoration: InputDecoration(
-                    fillColor: Colors.pinkAccent,
-                    filled: true,
-                    hintText: 'Enter your email address',
-                    hintStyle: TextStyle(
-                        color: Colors.white70
-                    ),
-                    //suffixIcon: Icon(Icons.email_outlined, color: Colors.white70,),
-                    prefixIcon: Icon(Icons.email_outlined, color: Colors.white70,),
-                    label: Text('Email address'),
-                    labelStyle: TextStyle(
-                        color: Colors.white
-                    )
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: TextField(
-                obscureText: true,
-                controller: TextEditingController(),
-                style: TextStyle(
-                    color: Colors.white
-                ),
-                decoration: InputDecoration(
-                  fillColor: Colors.pinkAccent,
-                  filled: true,
-                  hintText: 'Enter your password',
-                  hintStyle: TextStyle(
-                      color: Colors.white70
-                  ),
-                  prefixIcon: Icon(Icons.password, color: Colors.white70,),
-                  //suffixIcon: Icon(Icons.password, color: Colors.white70,),
-                  label: Text('Password'),
-                  labelStyle: TextStyle(
-                      color: Colors.white
-                  ),
-                  border: OutlineInputBorder(),
-                  enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.white)
-                  ),
-                  disabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.red)
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.green)
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
+            children: [
+              Icon(Icons.adb_rounded),
+              Icon(Icons.adb_rounded),
+              Icon(Icons.adb_rounded),
+              Icon(Icons.adb_rounded),
+              Icon(Icons.adb_rounded),
+              Icon(Icons.adb_rounded),
+              Icon(Icons.adb_rounded),
+              Icon(Icons.adb_rounded),
+              Icon(Icons.adb_rounded),
+              Icon(Icons.adb_rounded),
+              Icon(Icons.adb_rounded),
+              Icon(Icons.adb_rounded),
+              Icon(Icons.adb_rounded),
+              Icon(Icons.adb_rounded),
+              Icon(Icons.adb_rounded),
+              Icon(Icons.adb_rounded),
+              Icon(Icons.adb_rounded),
+              Icon(Icons.adb_rounded),
+            ],
+          )
       ),
     );
   }

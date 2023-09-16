@@ -35,9 +35,7 @@ class ShoppingListPage extends StatelessWidget {
         actions: [
           IconButton(
             icon: Icon(Icons.shopping_cart),
-            onPressed: () {
-              // Handle cart icon tap
-            },
+            onPressed: () {},
           ),
         ],
       ),
@@ -47,7 +45,6 @@ class ShoppingListPage extends StatelessWidget {
           return ListTile(
             leading: Icon(shoppingItems[index].icon),
             title: Text(shoppingItems[index].name),
-            // Add any additional styling here
           );
         },
       ),
